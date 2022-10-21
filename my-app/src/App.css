@@ -28,6 +28,14 @@
   color: #61dafb;
 }
 
+.App-outerContainer {
+  height: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightblue;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

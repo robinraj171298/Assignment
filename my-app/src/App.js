@@ -1,10 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
-import { TextField } from '@mui/material';
+import { OnboardingSceen } from './Components/OnboardingScreen';
 
 export const App = () => {
   return (
-    <TextField></TextField>
+    <div class="App-outerContainer">
+      <OnboardingSceen />
+    </div>
   )
 }
 
