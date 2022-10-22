@@ -1,7 +1,7 @@
 import React from 'react';
-import styles from './card.module.scss';
-import user from '../../../assests/icons/user.png';
-import group from '../../../assests/icons/group.png';
+import './Card.css';
+import user from '../Assets/Images/user.png';
+import group from '../Assets/Images/group.png';
 
 export const Card = ({card, isActive, setUsage}) => {
 
@@ -10,13 +10,13 @@ export const Card = ({card, isActive, setUsage}) => {
     }
 
   return (
-        <div className={styles.Card} onClick={handleCardSelect}
+        <div class="Card" onClick={handleCardSelect}
           style={{ border: isActive ? "2px solid #5A4AD1": "2px solid #e2ebf6" }}>
             <img style={{marginBottom:'0.7rem'}} 
             src={card.id === 1 ? user : group} 
             alt={card.title} height="20rem" width="20rem"/>
-            <span className={styles.Card__content__title}>{card.title}</span>
-            <span className={styles.Card__content__text}>{card.text}</span>
+            <span class="Card__content__title">{card.title}</span>
+            <span class="Card__content__text">{card.text}</span>
         </div>
   )
 }

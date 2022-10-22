@@ -6,7 +6,7 @@ export const CustomTextField = (props) => {
     <>
             <TextField
               id={props.id}
-              label={props.label}
+              //label={props.label}
               placeholder={props.placeholder}
               value={props.workspaceName}
               onChange={props.onChange()}

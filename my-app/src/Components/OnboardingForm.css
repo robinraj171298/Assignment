@@ -9,20 +9,21 @@
     flex-direction: column;
     align-items: center;
     margin-bottom: 2.5rem;
-
-    /* &__main {
-        font-size: 2rem;
-        font-weight: 600;
-        color: var(--color-primary-text-dark);
-
-    }
-
-    &__sub {
-        font-size: 1rem;
-        font-weight: 400;
-        color: var(--color-primary-text-medium);
-    } */
 }
+
+ .tabHeader__main {
+     font-size: 2rem;
+     font-weight: 600;
+     color: var(--color-primary-text-dark);
+
+ }
+
+ .tabHeader__sub {
+     font-size: 2rem;
+     font-weight: 600;
+     color: var(--color-primary-text-dark);
+
+ }
 
 .form_section {
 
@@ -54,11 +55,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    /* &__img {
-        margin-bottom: 2rem;
-    } */
 }
+.tabFour__img {
+     margin-bottom: 2rem;
+ }
 
 /* @media only screen and (min-width: 200px) and (max-width: 600px) {
     .tabHeader {
