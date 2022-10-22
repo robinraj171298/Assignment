@@ -45,7 +45,7 @@ export const OnboardingForm = () => {
     }
   ];
 
-  const [tabNumber, setTabNumber] = useState(2);
+  const [tabNumber, setTabNumber] = useState(1);
 
   /** form state for individual tabs */
   const [user, setUser] = useState({
@@ -70,10 +70,9 @@ export const OnboardingForm = () => {
   });
 
   /** onClick of Button in each tab */
-  const handleClick = () => {
+    const handleClick = () => {
     setFormState({...user,...workSpace,...usage});
-    if (tabNumber === 3) setTabNumber((tab) => tab + 1);
-    if (tabNumber === 4) console.log(formState);
+    if (tabNumber !== 4) setTabNumber((tab) => tab + 1);
   }
 
     /** Form submit */
@@ -94,16 +93,19 @@ const handleFormSubmit = (e) => {
 
       <div class="form_section">
         { tabNumber === 1 &&
-            <>
+                    <>
+        <div class="inputField">
             <CustomTextField 
               id="fullName"
               label="Full Name"
               placeholder='Steve Jobs'
               value={user.fullName}
-              onChange={(value) => setUser({...user, 'fullName': value })}
+                            onChange={(value) => { debugger; setUser({ ...user, 'fullName': value }) }}
               minLength="2"
               maxLength="25"
-            />
+                        />
+        </div>
+        <div class="inputField">
             <CustomTextField
               id="displayName"
               label="Display Name"
@@ -113,13 +115,16 @@ const handleFormSubmit = (e) => {
               minLength="2"
               maxLength="12"
             />
-            <CustomButton text="Create Workspace" handleClick={handleClick} /> 
-         </>
+                    </div>
+                            <CustomButton text="Create Workspace" handleClick={handleClick} /> 
+
+         </>  
         }
 
         { tabNumber === 2 &&
-            <>
-            <CustomTextField
+                    <>
+        <div class="inputField">
+           <CustomTextField
               id="workspaceName"
               label="Workspace Name"
               placeholder='Eden'
@@ -128,8 +133,9 @@ const handleFormSubmit = (e) => {
               minLength="2"
               maxLength="25"
             />
-          
-            <CustomTextField
+        </div>
+        <div class="inputField">
+           <CustomTextField
               id="workspaceURL"
               label="Workspace URL"
               placeholder='Example'
@@ -138,6 +144,8 @@ const handleFormSubmit = (e) => {
               minLength="2"
               maxLength="20"
             />
+        </div>
+        
             
             <CustomButton text="Create Workspace" handleClick={handleClick} />
          </>

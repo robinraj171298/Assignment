@@ -1,2 +1,12 @@
-.CustomTextField-input{
+.customTextField{
+    width: 100%;
 }
+
+.inputLabel{
+    width: 100%;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 7px;
+    color: #808080;
+}
+

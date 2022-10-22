@@ -24,7 +24,7 @@ export const OnboardingSceen = () => {
                     <CustomTextField></CustomTextField>
                 </Grid> */}
                 <Grid item>
-                    <OnboardingForm tabNumber={3} />
+                    <OnboardingForm />
                 </Grid>
             </Grid>
       </Paper>
