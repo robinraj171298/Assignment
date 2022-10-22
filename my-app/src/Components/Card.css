@@ -8,36 +8,33 @@
 }
 
 .Card {
+    margin-top: 25px;
     width: 12rem;
     border-radius: 5px;
     cursor: pointer;
-    height: 11rem;
+    height: 153px;
     display: flex;
     flex-direction: column;
     padding: 16px;
     transition: border-color 0.2s ease-out;
     justify-content: space-between;
 
-    /* &__content {
-
-        &__title {
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: var(--color-primary-text-dark);
-        }
-
-        &__text {
-            font-size: 1rem;
-            display: flex;
-            flex-wrap: wrap;
-            color: var(--color-primary-text-medium);
-        }
-    } */
-
     /* &:hover {
         // box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
         box-shadow: rgba(0, 0, 0, 0.15) 0px 8px 24px;
     } */
+}
+
+.Card__content__title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--color-primary-text-dark);
+}
+
+.Card__content__text {
+    font-size: 15px;
+    font-weight: 600;
+    color: #808080;
 }
 
 @media only screen and (min-width: 200px) and (max-width: 600px) {

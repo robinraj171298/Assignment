@@ -1,4 +1,5 @@
 import { CustomTextField } from './CustomTextField';
+import React from 'react';
 import Paper from '@mui/material/Paper';
 import { AppLogo } from './AppLogo';
 import {HorizontalLinearStepper} from './Stepper'
@@ -7,6 +8,11 @@ import { Grid } from '@mui/material';
 import { OnboardingForm } from './OnboardingForm';
 
 export const OnboardingSceen = () => {
+    const [currentTab, setCurrentTab] = React.useState(1);
+
+     const handleTabChange = tab => {
+        setCurrentTab(tab);
+    };
     return (
         <Paper elevation={2} class="mainContainer">
             <Grid container flexDirection="column" justifyContent="center"
@@ -15,7 +21,7 @@ export const OnboardingSceen = () => {
                     <AppLogo />
                 </Grid>
                 <Grid item>
-                    <HorizontalLinearStepper />
+                    <HorizontalLinearStepper currentTab={currentTab} />
                 </Grid>
                 {/* <Grid item>
                     <CustomTextField></CustomTextField>
@@ -24,7 +30,7 @@ export const OnboardingSceen = () => {
                     <CustomTextField></CustomTextField>
                 </Grid> */}
                 <Grid item>
-                    <OnboardingForm />
+                    <OnboardingForm handleTabChange={handleTabChange} />
                 </Grid>
             </Grid>
       </Paper>

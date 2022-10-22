@@ -6,8 +6,8 @@ import StepLabel from '@mui/material/StepLabel';
 
 const steps = [1,2,3,4];
 
-export const HorizontalLinearStepper = () => {
-  return (<Stepper activeStep={2} style={ {width : '500px'}}>
+export const HorizontalLinearStepper = props => {
+  return (<Stepper activeStep={props.currentTab - 1} style={ {width : '500px'}}>
    {steps.map((label, index) => {
           
           return (

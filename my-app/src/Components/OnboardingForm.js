@@ -7,7 +7,7 @@ import check from '../Assets/Images/check.PNG';
 import { CustomTextField } from './CustomTextField';
 
 
-export const OnboardingForm = () => {
+export const OnboardingForm = props => {
   /** Headings for each Tab */
   const tabHeadings = [
     {
@@ -72,15 +72,19 @@ export const OnboardingForm = () => {
   /** onClick of Button in each tab */
     const handleClick = () => {
     setFormState({...user,...workSpace,...usage});
-    if (tabNumber !== 4) setTabNumber((tab) => tab + 1);
+        if (tabNumber !== 4) {
+            props.handleTabChange(tabNumber + 1);
+            setTabNumber((tab) => tab + 1);
+        };
   }
 
     /** Form submit */
-const handleFormSubmit = (e) => {
-    e.preventDefault();
-    if (tabNumber === 4) return;
-    setTabNumber((tab) => tab + 1);
-  }
+// const handleFormSubmit = (e) => {
+//     e.preventDefault();
+//     if (tabNumber === 4) return;
+//     setTabNumber((tab) => tab + 1);
+//   }
+
 
     return (
     <div class="Onboarding">
